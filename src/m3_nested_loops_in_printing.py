@@ -3,8 +3,8 @@ This project demonstrates NESTED LOOPS (i.e., loops within loops)
 in the context of PRINTING on the CONSOLE.
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Bryan Wolfe.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
@@ -43,8 +43,18 @@ def rectangle_of_stars(r, c):
        *****
     Preconditions:  r and c are non-negative integers.
     """
+    for i in range(r):
+        for j in range(c):
+            print('*', end='')
+        print()
+
+
+
+
+
+
     # ------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # Done: 2. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     #  *** Unless your instructor directs you otherwise,
@@ -97,8 +107,17 @@ def triangle_of_stars(r):
        *****
     Precondition:  r is a non-negative integer.
     """
+    for i in range(r):
+        for j in range(i):
+            print('*', end='')
+        print()
+
+
+
+
+
     # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # Done: 3. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     #  *** Unless your instructor directs you otherwise,
@@ -149,8 +168,17 @@ def decreasing_exclamation_marks(m, n):
        !!
     Precondition:  m and n are positive integers with m >= n.
     """
+    for k in range(m):
+        for i in range(m-k):
+            print('!', end='')
+        print()
+        if m - k == n:
+            break
+    print()
+
+
     # ------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # Done: 4. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
@@ -191,8 +219,22 @@ def alternating_brackets(m, n):
        []
     Precondition:  m and n are positive integers with m >= n.
     """
+    for k in range(m):
+        for i in range(m-k):
+            if i %2 == 0:
+                print('[', end='')
+            else:
+                print(']', end='')
+        print()
+        if m - k == n:
+            break
+    print()
+
+
+
+
     # ------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # Done: 5. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
@@ -234,8 +276,13 @@ def triangle_same_number_in_each_row(r):
        55555
     Precondition:  r is a non-negative integer.
     """
+    for i in range(r):
+        for j in range(i+1):
+            print(i+1, end='')
+        print()
+
     # ------------------------------------------------------------------
-    # TODO: 6. Implement and test this function.
+    # Done: 6. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
@@ -277,8 +324,15 @@ def triangle_all_numbers_in_each_row(r):
        12345
     Precondition:  r is a non-negative integer.
     """
+    for i in range(r+1):
+        for j in range(1, i+1):
+            print(j, end='')
+        print()
+
+
+
     # ------------------------------------------------------------------
-    # TODO: 7. Implement and test this function.
+    # Done: 7. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
