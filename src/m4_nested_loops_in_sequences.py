@@ -241,7 +241,7 @@ def print_characters(sequence_of_strings):
 
 
     # ------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # Done: 5. Implement and test this function.
     #  ** READ THE TESTS that have been written for you (ABOVE).
     #  ** ASK QUESTIONS if you do not understand the TESTS (ABOVE).
     # ------------------------------------------------------------------
@@ -294,14 +294,18 @@ def print_characters_slanted(sequence_of_strings):
     Precondition:  the given argument is a sequence of strings.
     """
     # ------------------------------------------------------------------
-    # TODO: 6. Implement and test this function.
+    # Done: 6. Implement and test this function.
     #  ** READ THE TESTS that have been written for you (ABOVE).
     #  ** ASK QUESTIONS if you do not understand the TESTS (ABOVE).
     #
     # ** HINT: ** Consider using string multiplication for the spaces
     #             and string addition to stitch the spaces to the character.
     # ------------------------------------------------------------------
-
+    for k in range(len(sequence_of_strings)):
+        for i in range(len(sequence_of_strings[k])):
+            print(' '*(i) + sequence_of_strings[k][i], end='')
+            print()
+        print()
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
